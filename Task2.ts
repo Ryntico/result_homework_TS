@@ -38,7 +38,10 @@ const posts = [
 
 type UnnormalizedData = typeof posts
 type UnnormalizedDataElement = typeof posts[0]
-type NormalizedData = {byId: {[id: string]: UnnormalizedDataElement}, allIds: Array<string>}
+type NormalizedData = {
+  byId: { [id: string]: UnnormalizedDataElement },
+  allIds: Array<string>
+}
 
 const normalizeData = (unnormalizedData: UnnormalizedData): NormalizedData => {
   const byId: { [id: string]: UnnormalizedDataElement } = {}
